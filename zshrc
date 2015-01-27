@@ -1,6 +1,6 @@
 #################################### aliases ####################################
 alias mc="mc -as"
-
+alias vim="/opt/local/bin/vim"
 alias ls='ls' #--color=auto -F'
 alias grep='egrep' #--colour=auto'
 
