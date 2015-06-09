@@ -1,6 +1,6 @@
-#################################### aliases ####################################
+################################## aliases ####################################
 alias mc="mc -as"
-alias vim="/opt/local/bin/vim"
+alias vim="/usr/local/bin/vim"
 alias ls='ls' #--color=auto -F'
 alias grep='egrep' #--colour=auto'
 
@@ -33,7 +33,12 @@ alias jordan='ssh aleksandrov@193.19.247.116'
 ##### Juniper #####
 alias up='cd ..'
 alias cdc='cd ~/Documents/cases/sub-mgt/'
-
+alias con-att-re0='telnet ipg-ts3-port27.jtac-emea.jnpr.net'
+alias con-att-re1='telnet ipg-ts3-port26.jtac-emea.jnpr.net'
+alias con-opti-re0='telnet ipg-ts3-port18.jtac-emea.jnpr.net'
+alias con-opti-re1='telnet ipg-ts3-port16.jtac-emea.jnpr.net'
+alias con-prim-re0='telnet ipg-ts3-port21.jtac-emea.jnpr.net'
+alias con-prim-re1='telnet ipg-ts3-port29.jtac-emea.jnpr.net'
 
 alias -g L='|less'
 alias -g G='|grep'
@@ -193,7 +198,7 @@ black=`C 0`; red=`C 1`; green=`C 2`; yellow=`C 3`; blue=`C 4`; magenta=`C 5`; cy
 function _update_ps1() {
     #export PROMPT="$(~/powerline-zsh.py $?)"
     export PROMPT="$(~/powerline-zsh.py $? R)"
-    export RPROMPT="$(~/powerline-zsh.py)"
+    export RPROMPT="$green%h$(~/powerline-zsh.py)"
 }
 precmd() {
     _update_ps1
@@ -218,9 +223,10 @@ WATCHFMT='%n %a %l from %M at %T.'
 export HELPDIR=/usr/local/lib/zsh/help  # directory for run-help function to find docs
 #because .zshenv is loaded very first, many fucken systems overload that settings
 #thatwhy i put ENV here
-export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin:/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=/usr/local/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin:/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/usr/local/sbin:~/bin:/usr/bin:/bin:/opt/X11/bin:$PATH
 export STARDICT_DATA_DIR=/Users/daleksandrov/.stardict
-
+export CLASSPATH=$CLASSPATH:~/ownCloud/dev/java/Princeton/AlghoritmsPart1/algs4/stdlib.jar:~/ownCloud/dev/java/Princeton/AlghoritmsPart1/algs4/algs4.jar
 export EDITOR="vim"
 export PAGER="less"
 
